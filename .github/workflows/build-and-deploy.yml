@@ -1,0 +1,55 @@
+name: Continuous Integration
+
+on:
+  pull_request:
+  push:
+    branches:
+    - master
+
+jobs:
+  build:
+    timeout-minutes: 10
+    runs-on: ubuntu-latest
+    name: Build and Test
+
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        node-version: '16'
+
+    - name: Install Dependencies
+      run: npm install --loglevel verbose
+
+    - name: Lint check
+      run: npm run lint
+
+    - name: Run Tests
+      run: npm test
+
+    - name: Run build-prod
+      run: npm run build-prod
+
+    ### Need to publish to npm
+
+  deploy_storybook:
+    needs: build
+    if: |
+      github.ref == 'refs/heads/master'
+    timeout-minutes: 6
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: Install Dependencies
+        run: | 
+          npm install
+          npm run build-storybook
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: docs
+

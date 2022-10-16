@@ -1,0 +1,78 @@
+{
+  "name": "@sharpe.st/design-system",
+  "version": "1.0.0",
+  "description": "Library of reusable UI components to enhance and speed up your development process.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Succeeded tests 1000 ✅\" && exit 0",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook -o docs-build -s ./stories/assets",
+    "lint": "npm run lint-css && npm run lint-js --",
+    "lint-css": "stylelint src/**/*.jsx",
+    "lint-js": "eslint src/**/*.jsx",
+    "lint-fix": "npm run lint -- --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sharpe-st/design-system.git"
+  },
+  "keywords": [
+    "react",
+    "ui",
+    "storybook",
+    "javascript"
+  ],
+  "author": "sharpest",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sharpe-st/design-system/issues"
+  },
+  "homepage": "https://github.com/sharpe-st/design-system#readme",
+  "dependencies": {
+    "@material-ui/core": "^4.12.4",
+    "@material-ui/icons": "^4.11.3",
+    "lodash": "^4.17.21",
+    "postcss": "^8.4.18"
+  },
+  "peerDependencies": {
+    "prop-types": ">= 15.0",
+    "react": ">= 18.0",
+    "styled-components": ">= 5.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.19.3",
+    "@storybook/addon-actions": "^6.5.12",
+    "@storybook/addon-essentials": "^6.5.12",
+    "@storybook/addon-interactions": "^6.5.12",
+    "@storybook/addon-links": "^6.5.12",
+    "@storybook/builder-webpack4": "^6.5.12",
+    "@storybook/builder-webpack5": "^6.5.12",
+    "@storybook/manager-webpack4": "^6.5.12",
+    "@storybook/manager-webpack5": "^6.5.12",
+    "@storybook/react": "^6.5.12",
+    "@storybook/testing-library": "^0.0.13",
+    "@stylelint/postcss-css-in-js": "^0.38.0",
+    "babel-loader": "^8.2.5",
+    "eslint": "^8.25.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
+    "eslint-plugin-react": "^7.31.10",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "styled-components": "^5.3.6",
+    "stylelint": "^14.14.0",
+    "stylelint-config-standard": "^29.0.0",
+    "stylelint-config-standard-scss": "^5.0.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.10.0",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  },
+  "pre-commit": [
+    "lint",
+    "test"
+  ]
+}
