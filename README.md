@@ -7,7 +7,7 @@
 ### Library of reusable UI components to enhance and speed up your development process.
 
 
-<img height=350 width="100%" src="./static/images/banner.jpg"/>
+<img height=500 width="100%" src="./static/images/banner.jpg"/>
 <br/>
 Image by <a href="https://www.freepik.com/free-vector/flat-design-content-management-system-illustration_11855884.htm#query=design%20system&position=2&from_view=keyword">Freepik</a>
 <br/>
