@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Succeeded tests 1000 ✅\" && exit 0",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook -o docs-build -s ./stories/assets",
+    "build-storybook": "build-storybook -o docs",
     "lint": "npm run lint-css && npm run lint-js --",
     "lint-css": "stylelint src/**/*.jsx",
     "lint-js": "eslint src/**/*.jsx",
@@ -32,8 +32,7 @@
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
     "@mui/material": "^5.10.9",
-    "lodash": "^4.17.21",
-    "postcss": "^8.4.18"
+    "lodash": "^4.17.21"
   },
   "peerDependencies": {
     "prop-types": ">= 15.0",
@@ -60,6 +59,7 @@
     "eslint-plugin-jsx-a11y": "^6.6.1",
     "eslint-plugin-react": "^7.31.10",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "postcss": "^8.4.18",
     "pre-commit": "^1.2.2",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
