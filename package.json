@@ -29,8 +29,9 @@
   },
   "homepage": "https://github.com/sharpe-st/design-system#readme",
   "dependencies": {
-    "@material-ui/core": "^4.12.4",
-    "@material-ui/icons": "^4.11.3",
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "@mui/material": "^5.10.9",
     "lodash": "^4.17.21",
     "postcss": "^8.4.18"
   },
