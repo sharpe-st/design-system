@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Succeeded tests 1000 ✅\" && exit 0",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook -o docs",
+    "build-storybook": "build-storybook -o docs-build",
     "lint": "npm run lint-css && npm run lint-js --",
     "lint-css": "stylelint src/**/*.jsx",
     "lint-js": "eslint src/**/*.jsx",
